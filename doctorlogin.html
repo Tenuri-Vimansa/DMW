@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doctor Login - Life Bloom Hospital</title>
+
+    <!-- Bootstrap Lux Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/lux/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+      /* Curved Header */
+      .login-header {
+        background: linear-gradient(135deg, #0d6efd, #003366);
+        color: white;
+        padding: 60px 20px;
+        border-bottom-left-radius: 50% 10%;
+        border-bottom-right-radius: 50% 10%;
+        text-align: center;
+      }
+
+      .login-header h1 {
+        font-weight: 700;
+      }
+
+      /* Login Card */
+      .login-card {
+        max-width: 420px;
+        margin: -50px auto 40px auto; /* overlap with header */
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .form-control {
+        border-radius: 10px;
+      }
+
+      .btn-login {
+        background-color: #0d6efd;
+        color: white;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .btn-login:hover {
+        background-color: #003366;
+      }
+
+      /* Footer */
+      footer {
+        background: #0d6efd;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: auto;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="login-header">
+      <h1><i class="bi bi-person-circle"></i> Doctor Login</h1>
+      <p>Access your portal to manage appointments and patients</p>
+    </div>
+
+    <!-- Login Card -->
+    <div class="login-card">
+      <form method="post" action="login.php">
+        <div class="mb-3">
+          <label for="doctorId" class="form-label">Doctor ID</label>
+          <input type="text" class="form-control" name="doctorId" id="doctorId" placeholder="Enter your Doctor ID">
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Remember Me</label>
+        </div>
+
+        <button type="submit" class="btn btn-login w-100">Login</button>
+      </form>
+
+      <div class="text-center mt-3">
+        <p>Register Account? <a href="doctor-registration.html" class="text-decoration-none text-primary">Register here</a></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 Life Bloom Hospital. All Rights Reserved.
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
