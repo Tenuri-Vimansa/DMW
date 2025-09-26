@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $DoctorId = $_POST['doctorId'] ?? '';
     $Password = $_POST['password'] ?? '';
 
-    // Prepared statement to prevent SQL injection
+ 
     $stmt = $conn->prepare("SELECT Password FROM Doctor WHERE Doctor_Id = ?");
     $stmt->bind_param("s", $DoctorId);
     $stmt->execute();

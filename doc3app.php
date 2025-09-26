@@ -11,7 +11,7 @@ $port = 3306;
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
 if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 
-// ---------- Handle AJAX request for next appointment number ----------
+
 if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
     $date = $_GET['date'] ?? date('Y-m-d');
     $sql = "SELECT COUNT(*) AS total FROM dr_ken WHERE Date = '$date'";

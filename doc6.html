@@ -111,7 +111,7 @@ function getAppointmentNo() {
     }
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "doc6aoo.php?ajax=1&date=" + date, true); // AJAX mode
+    xhr.open("GET", "doc6aoo.php?ajax=1&date=" + date, true); 
     xhr.onload = function() {
         if (xhr.status == 200) {
             document.getElementById("appointment_no").value = xhr.responseText;

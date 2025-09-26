@@ -6,9 +6,9 @@ ini_set('display_errors', 1);
 // Database configuration
 $servername = "localhost";
 $username = "root";
-$password = "";  // MySQL password
+$password = ""; 
 $dbname = "dmw";
-$port = 3306;    // adjust if your MySQL uses custom port
+$port = 3306;   
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
@@ -35,7 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("<script>alert('Passwords do not match'); window.history.back();</script>");
     }
 
-    // Hash password
     $passwordHash = password_hash($Password, PASSWORD_BCRYPT);
 
     // Prepare SQL
